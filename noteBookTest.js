@@ -1,7 +1,7 @@
 var NOTEMODULE = (function(exports) {
 
   function testThatNoteBookHasEmptyArrayByDefault() {
-    var notebook = new NoteBookClass;
+    var notebook = new NoteBook;
     if (notebook.notes != 0) {
       throw new Error ('Something went wrong')
     }
@@ -10,8 +10,8 @@ var NOTEMODULE = (function(exports) {
  testThatNoteBookHasEmptyArrayByDefault();
 
   function testThatNewNoteCreated() {
-    var notebook = new NoteBookClass();
-    var note = new NoteClass('Favourite drink: seltzer');
+    var notebook = new NoteBook();
+    var note = new Note('Favourite drink: seltzer');
     var newNote = notebook.create('Favourite drink: seltzer');
     if (!notebook.isEquivalent(newNote, note)) {
       throw new Error ('Something went wrong')
@@ -21,8 +21,8 @@ var NOTEMODULE = (function(exports) {
  testThatNewNoteCreated();
 
  function testThatNewNoteAddedToBook() {
-   var notebook = new NoteBookClass();
-   var note = new NoteClass('AAAA');
+   var notebook = new NoteBook();
+   var note = new Note('AAAA');
    notebook.add(note);
    var newNote = notebook.notes[0]
    if (!notebook.isEquivalent(newNote, note)) {
@@ -33,7 +33,7 @@ var NOTEMODULE = (function(exports) {
 testThatNewNoteAddedToBook();
 
 function testThatNotesListed() {
-  var notebook = new NoteBookClass();
+  var notebook = new NoteBook();
   var arrayUtils = new ArrayUtils();
   noteA = notebook.create('Mamba');
   notebook.add(noteA);

@@ -1,26 +1,26 @@
 var NOTEBOOKMODULE = (function(exports) {
-  exports.NoteBookClass = NoteBookClass;
-  function NoteBookClass() {
+  exports.NoteBook = NoteBook;
+  function NoteBook() {
     this.notes = [];
   };
 
-  NoteBookClass.prototype.list = function() {
+  NoteBook.prototype.list = function() {
     return this.notes.map(function(note) {
       return note.text;
     });
   };
 
-  NoteBookClass.prototype.create = function(text) {
-    note = new NoteClass(text);
+  NoteBook.prototype.create = function(text) {
+    note = new Note(text);
     return note
   };
 
-  NoteBookClass.prototype.add = function(note) {
+  NoteBook.prototype.add = function(note) {
     this.notes.push(note);
     return this.notes
   };
 
-  NoteBookClass.prototype.isEquivalent = function(noteA, noteB) {
+  NoteBook.prototype.isEquivalent = function(noteA, noteB) {
     if (noteA.text === noteB.text) {
       return true;
     }

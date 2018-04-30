@@ -1,9 +1,9 @@
 var NOTEMODULE = (function(exports) {
-  exports.NoteClass = NoteClass;
-  function NoteClass(text) {
+  exports.Note = Note;
+  function Note(text) {
     this.text = text;
   };
-  NoteClass.prototype.abbreviation = function() {
+  Note.prototype.abbreviation = function() {
     var newtext = this.text.slice(0, 20)
     return newtext
   };
