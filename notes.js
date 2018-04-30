@@ -1,7 +1,12 @@
-(function(exports) {
-  function Note(text) {
-    this.text = text
-  };
+var NOTEMODULE = (function(exports) {
+  exports.NoteClass = NoteClass;
+  function NoteClass(text) {
+    this.text = text;
+  }
+  NoteClass.prototype.abbreviation = function() {
+    var newtext = this.text.slice(0, 20)
+    return newtext
+  }
 
-  exports.Note = Note;
-}) (this);
+  return exports;
+})(this);
