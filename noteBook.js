@@ -5,11 +5,9 @@ var NOTEBOOKMODULE = (function(exports) {
   };
 
   NoteBookClass.prototype.list = function() {
-    var textStorage = []
     return this.notes.map(function(note) {
-      textStorage.push(note.text);
+      return note.text;
     });
-    return textStorage
   };
 
   NoteBookClass.prototype.create = function(text) {
@@ -26,6 +24,7 @@ var NOTEBOOKMODULE = (function(exports) {
     if (noteA.text === noteB.text) {
       return true;
     }
+    return false;
   };
 
   return exports;

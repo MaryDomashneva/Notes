@@ -34,16 +34,16 @@ testThatNewNoteAddedToBook();
 
 function testThatNotesListed() {
   var notebook = new NoteBookClass();
+  var arrayUtils = new ArrayUtils();
   noteA = notebook.create('Mamba');
   notebook.add(noteA);
   noteB = notebook.create('Cramba');
   notebook.add(noteB);
   noteC = notebook.create('Lamba')
   notebook.add(noteC);
-  if(notebook.list() !== ['Mamba', 'Cramba', 'Lamba']) {
+  if(!arrayUtils.isEquivalent(notebook.list(), ['Mamba', 'Cramba', 'Lamba'])) {
     throw new Error ('Something went wrong')
   }
-
  };
 
 testThatNotesListed();
