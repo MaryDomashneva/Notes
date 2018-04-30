@@ -1,6 +1,6 @@
 (function(exports) {
-  function Note() {
-    this.abbreviationlength = 20;
+  function Note(text) {
+    this.text = text
   };
 
   exports.Note = Note;
