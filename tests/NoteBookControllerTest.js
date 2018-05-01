@@ -9,7 +9,8 @@ var NOTEBOOKCONTROLLERMODULE = (function(exports) {
     var noteBookController = new NoteBookController();
     noteBookController.updateApp(divDouble);
 
-    if (divDouble.innerHTML !== noteBookController.notebookview.HTMLNoteBookRepresentation()) {
+    if (divDouble.innerHTML !==
+      noteBookController.notebookview.HTMLNoteBookRepresentation()) {
       throw new Error ('Something went wrong!')
     }
   };
