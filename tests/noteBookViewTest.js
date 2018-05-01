@@ -9,7 +9,7 @@ var NOTEBOOKVIEWMODULE = (function(exports) {
     var view = new NoteBookView(notebook);
     var actualString = view.HTMLNoteBookRepresentation();
     var expectedString =
-     '<ul><li><div>AAAA</div></li><li><div>BBBB</div></li></ul>';
+     "<ul><li><div id='0'>AAAA</div></li><li><div id='1'>BBBB</div></li></ul>";
     if (actualString !== expectedString) {
       throw new Error (`Something went wrong! ${actualString} not equal\
         ${expectedString}`);
