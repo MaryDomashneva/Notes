@@ -2,7 +2,7 @@
 //   notebook = new NoteBook();
 // });
 //
-// $(document).on('submit', 'form.NoteForm', function(event) {
+// $(document).on('submit', 'form.noteForm', function(event) {
 //   var text = document.getElementById('noteInputField').value;
 //   var note = new Note(text);
 //   notebook.add(note);

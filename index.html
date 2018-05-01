@@ -2,18 +2,30 @@
   <html>
   <head>
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script> -->
-    <script src="lib/arrayUtils.js"></script>
-    <script src="lib/note.js"></script>
-    <script src="lib/noteBook.js"></script>
-    <script src="views/noteBookView.js"></script>
-    <script src="tests/noteBookTest.js"></script>
-    <script src="tests/noteTest.js"></script>
-    <script src="tests/noteBookViewTest.js"></script>
-
+    <script src="lib/ArrayUtils.js"></script>
+    <script src="lib/Note.js"></script>
+    <script src="lib/NoteBook.js"></script>
+    <script src="views/NoteBookView.js"></script>
+    <script src="controllers/NoteBookController.js"></script>
+    <script src="tests/NoteBookTest.js"></script>
+    <script src="tests/NoteTest.js"></script>
+    <script src="tests/NoteBookViewTest.js"></script>
+    <script src="tests/NoteBookControllerTest.js"></script>
+    <script>
+    // run this function when the document is loaded
+    window.onload = function() {
+      var notebookController = new NoteBookController();
+      notebookController.updateApp();
+    }
+    </script>
   </head>
-  <body id = 'Note Book'>
+  <p>
+    --- Note Book ---
+  </p>
 
-    <form class = 'NoteForm'>
+  <body id = 'noteBook'>
+
+    <form id = 'noteForm'>
       <label for='note'> Note
         <input type='text' id = 'noteInputField' name='note' placeholder='your note here'/>
       </label>
@@ -21,7 +33,9 @@
         <input type='submit' value='Create' />
       </div>
     </form>
-
+    <div id = 'app'>
+      Hello
+    </div>
   </body>
   </html>
 </DOCTYPE>
