@@ -9,6 +9,8 @@ var NOTEMODULE = (function(exports) {
 
  testThatNoteBookHasEmptyArrayByDefault();
 
+ //#create test
+
   function testThatNewNoteCreated() {
     var notebook = new NoteBook();
     var noteA = new Note('Mamba');
@@ -19,6 +21,8 @@ var NOTEMODULE = (function(exports) {
    };
 
  testThatNewNoteCreated();
+
+  //#add test
 
  function testThatNewNoteAddedToBook() {
    var notebook = new NoteBook();
@@ -31,6 +35,8 @@ var NOTEMODULE = (function(exports) {
   };
 
 testThatNewNoteAddedToBook();
+
+//#list test
 
 function testThatNotesListed() {
   var notebook = new NoteBook();

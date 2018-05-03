@@ -1,5 +1,6 @@
 var NOTEBOOKVIEWMODULE = (function(exports) {
 
+//#HTMLNoteBookRepresentation test
   function testThatItReturnsRightString() {
     var notebook = new NoteBook();
     var noteA = notebook.create('Mamba');

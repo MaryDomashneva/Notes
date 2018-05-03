@@ -20,14 +20,18 @@
       var notebookController = new NoteBookController();
       notebookController.updateApp();
       notebookController.startListeningForHashChange();
+      notebookController.listenForEventSubmit();
     }
     </script>
   </head>
 
-<p>  --- Note Book --- </p>
+  <script>
+  </script>
 
+<p>  --- Note Book --- </p>
   <body id = 'noteBook'>
-    <form id = 'noteForm' action="/create_note" method="post">
+    <!-- action="/create_note" method="post" -->
+    <form id = 'noteForm'>
       <label for='note'>
         <input type='text' id = 'noteInputField' name='note' placeholder='your note here'/>
       </label>

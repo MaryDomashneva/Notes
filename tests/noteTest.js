@@ -9,6 +9,8 @@ var NOTEMODULE = (function(exports) {
 
  testThatNotetakesAParametr();
 
+//#abbreviation test
+
  function testAbbreviationFunction() {
     var note = new Note('My favourite language is JavaScript');
     var  newNote = note.abbreviation();
