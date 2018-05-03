@@ -4,7 +4,7 @@ var SINGLENOTEVIEWMODULE = (function(exports) {
     this.note = note;
   };
 
-  SingleNoteView.prototype.HTMLNoteBookRepresentation = function() {
+  SingleNoteView.prototype.HTMLNoteRepresentation = function() {
     var htmlString = ('<div>' + (this.note.text) + '</div>');
 
     return htmlString;

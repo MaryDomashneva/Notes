@@ -12,32 +12,34 @@
     <script src="tests/NoteTest.js"></script>
     <script src="tests/NoteBookViewTest.js"></script>
     <script src="tests/NoteBookControllerTest.js"></script>
-      <script src="tests/SingleNoteViewTest.js"></script>
+    <script src="tests/SingleNoteViewTest.js"></script>
+
     <script>
     // run this function when the document is loaded
     window.onload = function() {
       var notebookController = new NoteBookController();
       notebookController.updateApp();
+      notebookController.startListeningForHashChange();
     }
     </script>
   </head>
-  <p>
-    --- Note Book ---
-  </p>
+
+<p>  --- Note Book --- </p>
 
   <body id = 'noteBook'>
-
     <form id = 'noteForm'>
       <label for='note'> Note
         <input type='text' id = 'noteInputField' name='note' placeholder='your note here'/>
       </label>
       <div id = 'creates'>
-        <input type='submit' value='Create' />
+        <input type='submit' value='Create Note' />
       </div>
     </form>
+
     <div id = 'app'>
       Hello
     </div>
+
   </body>
   </html>
 </DOCTYPE>

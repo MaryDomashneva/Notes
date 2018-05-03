@@ -21,15 +21,15 @@ var NOTEBOOKVIEWMODULE = (function(exports) {
   };
 
   NoteBookView.prototype.HTMLNoteBookRepresentation = function() {
-    var htmlString = "<ul><li><div id='0'>";
+    var htmlString = `<ul><li><div id='0'><a href='#notes/0'>`;
     for (var i = 0; i < this.notebook.notes.length; i++) {
       var note = this.notebook.notes[i];
       htmlString += note.abbreviation();
       if (i !== this.notebook.notes.length - 1) {
-        htmlString += `</div></li><li><div id='${i+1}'>`;
+        htmlString += `</a></div></li><li><div id='${i+1}'><a href='#notes/${i+1}'>`;
       }
     }
-    htmlString += '</div></li></ul>';
+    htmlString += '</a></div></li></ul>';
     return htmlString;
   };
 

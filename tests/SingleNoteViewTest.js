@@ -5,7 +5,7 @@ var SINGLENOTEVIEWMODULE = (function(exports) {
     var singleNoteView = new SingleNoteView(note);
 
 
-    if (singleNoteView.HTMLNoteBookRepresentation() !== '<div>Favourite drink: seltzer</div>') {
+    if (singleNoteView.HTMLNoteRepresentation() !== '<div>Favourite drink: seltzer</div>') {
       throw new Error ('Something went wrong!')
     }
   };

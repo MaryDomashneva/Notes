@@ -2,14 +2,16 @@ var NOTEBOOKVIEWMODULE = (function(exports) {
 
   function testThatItReturnsRightString() {
     var notebook = new NoteBook();
-    var note1 = new Note('AAAA');
-    var note2 = new Note('BBBB');
-    notebook.add(note1);
-    notebook.add(note2);
+    var noteA = notebook.create('Mamba');
+    notebook.add(noteA);
+    var noteB = notebook.create('Cramba');
+    notebook.add(noteB);
+    var noteC = notebook.create('Lamba')
+    notebook.add(noteC);
     var view = new NoteBookView(notebook);
     var actualString = view.HTMLNoteBookRepresentation();
     var expectedString =
-     "<ul><li><div id='0'>AAAA</div></li><li><div id='1'>BBBB</div></li></ul>";
+     "<ul><li><div id='0'><a href='#notes/0'>Mamba</a></div></li><li><div id='1'><a href='#notes/1'>Cramba</a></div></li><li><div id='2'><a href='#notes/2'>Lamba</a></div></li></ul>";
     if (actualString !== expectedString) {
       throw new Error (`Something went wrong! ${actualString} not equal\
         ${expectedString}`);
@@ -17,4 +19,16 @@ var NOTEBOOKVIEWMODULE = (function(exports) {
   };
 
   testThatItReturnsRightString();
+
+  function testThatClickRightNoteLink() {
+
+  };
+
+  testThatClickRightNoteLink();
+
+  function testThatShowRightNote() {
+
+  };
+
+  testThatShowRightNote();
 })(this);

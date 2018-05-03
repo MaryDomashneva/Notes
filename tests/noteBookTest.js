@@ -11,8 +11,8 @@ var NOTEMODULE = (function(exports) {
 
   function testThatNewNoteCreated() {
     var notebook = new NoteBook();
-    var note = new Note('Favourite drink: seltzer');
-    var newNote = notebook.create('Favourite drink: seltzer');
+    var noteA = new Note('Mamba');
+    var newNote = notebook.create('Mamba');
     if (!notebook.isEquivalent(newNote, note)) {
       throw new Error ('Something went wrong')
     }
@@ -22,10 +22,10 @@ var NOTEMODULE = (function(exports) {
 
  function testThatNewNoteAddedToBook() {
    var notebook = new NoteBook();
-   var note = new Note('AAAA');
-   notebook.add(note);
+   var noteA = notebook.create('Mamba');
+   notebook.add(noteA);
    var newNote = notebook.notes[0]
-   if (!notebook.isEquivalent(newNote, note)) {
+   if (!notebook.isEquivalent(newNote, noteA)) {
      throw new Error ('Something went wrong')
    }
   };
@@ -34,13 +34,13 @@ testThatNewNoteAddedToBook();
 
 function testThatNotesListed() {
   var notebook = new NoteBook();
-  var arrayUtils = new ArrayUtils();
-  noteA = notebook.create('Mamba');
+  var noteA = notebook.create('Mamba');
   notebook.add(noteA);
-  noteB = notebook.create('Cramba');
+  var noteB = notebook.create('Cramba');
   notebook.add(noteB);
-  noteC = notebook.create('Lamba')
+  var noteC = notebook.create('Lamba')
   notebook.add(noteC);
+  var arrayUtils = new ArrayUtils();
   if(!arrayUtils.isEquivalent(notebook.list(), ['Mamba', 'Cramba', 'Lamba'])) {
     throw new Error ('Something went wrong')
   }
