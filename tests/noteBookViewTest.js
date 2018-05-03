@@ -20,15 +20,4 @@ var NOTEBOOKVIEWMODULE = (function(exports) {
 
   testThatItReturnsRightString();
 
-  function testThatClickRightNoteLink() {
-
-  };
-
-  testThatClickRightNoteLink();
-
-  function testThatShowRightNote() {
-
-  };
-
-  testThatShowRightNote();
 })(this);
