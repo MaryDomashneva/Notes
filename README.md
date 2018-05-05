@@ -58,7 +58,7 @@ View:
 
 #When open app
 
-<img src="https://monosnap.com/image/BCzrmysvf0wASK0QRU1s7TDpi31TAf.png" height="200" width="400">
+<img src="https://monosnap.com/image/dNisRwZjhowNmImL8aRvWnRtgiPH8b.png" height="200" width="400">
 
 #When adding long a note
 
