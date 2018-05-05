@@ -1,8 +1,8 @@
 var NOTEMODULE = (function(exports) {
   function testThatNotetakesAParametr() {
-     var note = new Note('My favourite language is JavaScript');
+     var note = new Note('My favorite breed of dog is french bulldog');
 
-     if (note.text !== 'My favourite language is JavaScript') {
+     if (note.text !== 'My favorite breed of dog is french bulldog') {
        throw new Error ('Something went wrong!')
      }
    };
@@ -12,9 +12,9 @@ var NOTEMODULE = (function(exports) {
 //#abbreviation test
 
  function testAbbreviationFunction() {
-    var note = new Note('My favourite language is JavaScript');
+    var note = new Note('My favorite breed of dog is french bulldog');
     var  newNote = note.abbreviation();
-    if (newNote !== 'My favourite languag') {
+    if (newNote !== 'My favorite breed of') {
       throw new Error ('Something went wrong!')
     }
   };

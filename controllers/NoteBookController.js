@@ -1,7 +1,7 @@
 var NOTEBOOKCONTROLLERMODULE = (function(exports) {
   exports.NoteBookController = NoteBookController;
   function NoteBookController(notebook = new NoteBook()) {
-    var note1 = new Note('Favourite drink: seltzer');
+    var note1 = new Note('My favorite breed of dog is french bulldog');
     notebook.add(note1);
     this.notebookview = new NoteBookView(notebook);
   };

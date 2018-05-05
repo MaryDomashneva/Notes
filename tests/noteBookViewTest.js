@@ -2,13 +2,7 @@ var NOTEBOOKVIEWMODULE = (function(exports) {
 
 //#HTMLNoteBookRepresentation test
   function testThatItReturnsRightString() {
-    var notebook = new NoteBook();
-    var noteA = notebook.create('Mamba');
-    notebook.add(noteA);
-    var noteB = notebook.create('Cramba');
-    notebook.add(noteB);
-    var noteC = notebook.create('Lamba')
-    notebook.add(noteC);
+    var notebook = notebookCreatorTreeNotesAndReturnNotebook()
     var view = new NoteBookView(notebook);
     var actualString = view.HTMLNoteBookRepresentation();
     var expectedString =

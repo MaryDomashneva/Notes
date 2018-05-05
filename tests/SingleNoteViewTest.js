@@ -3,10 +3,10 @@ var SINGLENOTEVIEWMODULE = (function(exports) {
 //#HTMLOpenNoteRepresentation test
 
   function testThatReturnRightOpenString() {
-    var note = new Note('Favourite drink: seltzer');
+    var note = new Note('My favorite breed of dog is french bulldog');
     var singleNoteView = new SingleNoteView(note, 0);
 
-    if (singleNoteView.HTMLOpenNoteRepresentation() !== "Favourite drink: seltzer<a href='#notes/0/close' style='text-decoration:none'> ―</a>") {
+    if (singleNoteView.HTMLOpenNoteRepresentation() !== "My favorite breed of dog is french bulldog<a href='#notes/0/close' style='text-decoration:none'> ―</a>") {
       throw new Error ('Something went wrong!')
     }
   };
@@ -16,13 +16,12 @@ var SINGLENOTEVIEWMODULE = (function(exports) {
 //#HTMLClosedNoteRepresentation test
 
   function testThatReturnRightClosedString() {
-    var note = new Note('Favourite drink: seltzer');
+    var note = new Note('My favorite breed of dog is french bulldog');
     var singleNoteView = new SingleNoteView(note, 2);
-
-    if (singleNoteView.HTMLClosedNoteRepresentation() !== "<a href='#notes/2'>Favourite drink: seltzer</a>") {
+    if (singleNoteView.HTMLClosedNoteRepresentation() !== "<a href='#notes/2'>My favorite breed of</a>") {
       throw new Error ('Something went wrong!')
     }
   };
 
-  testThatReturnRightOpenString();
+  testThatReturnRightClosedString();
 })(this);
