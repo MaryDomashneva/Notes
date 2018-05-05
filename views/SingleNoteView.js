@@ -6,7 +6,7 @@ var SINGLENOTEVIEWMODULE = (function(exports) {
   };
 
   SingleNoteView.prototype.HTMLOpenNoteRepresentation = function() {
-    var htmlString = (this.note.text) + `<a href='#notes/${this.noteId}/close' style='text-decoration:none'> ―</a>`;
+    var htmlString = (this.note.text) + `<a href='#notes/${this.noteId}/close' style='text-decoration:none'> -</a>`;
 
     return htmlString;
   };

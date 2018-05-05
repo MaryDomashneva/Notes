@@ -13,6 +13,7 @@ var NOTEBOOKCONTROLLERMODULE = (function(exports) {
       noteBookController.notebookview.HTMLNoteBookRepresentation()) {
       throw new Error ('Something went wrong!')
     }
+      console.log('%c Note Book Controller: test that HTML page has a right representation when loaded is passing', 'color:green')
   };
 
   testThatItUpdatesApp();
