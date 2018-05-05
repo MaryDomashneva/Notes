@@ -5,7 +5,8 @@ var NOTEMODULE = (function(exports) {
      if (note.text !== 'My favorite breed of dog is french bulldog') {
        throw new Error ('Something went wrong!')
      }
-     console.log('%c Note: test that function Note takes a parametr is passing', 'color:green')
+     console.log('%c Note: test that function Note takes a parametr is passing',
+      'color:green')
    };
 
  testThatNotetakesAParametr();
@@ -18,7 +19,8 @@ var NOTEMODULE = (function(exports) {
     if (newNote !== 'My favorite breed of') {
       throw new Error ('Something went wrong!')
     }
-    console.log('%c Note: test that method abbreviation reduce note to 20 chars is passing', 'color:green')
+    console.log('%c Note: test that method abbreviation reduce note to 20 chars\
+     is passing', 'color:green')
   };
 
 testAbbreviationFunction();

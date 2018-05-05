@@ -11,7 +11,8 @@ var NOTEBOOKVIEWMODULE = (function(exports) {
       throw new Error (`Something went wrong! ${actualString} not equal\
         ${expectedString}`);
     }
-    console.log('%c Note Book View: test that method HTMLNoteBookRepresentation returns a right output is passing', 'color:green')
+    console.log('%c Note Book View: test that method HTMLNoteBookRepresentation\
+    returns a right output is passing', 'color:green')
   };
 
   testThatItReturnsRightString();

@@ -30,24 +30,22 @@ var NOTEBOOKCONTROLLERMODULE = (function(exports) {
     }
   };
 
-  NoteBookController.prototype.createNote = function() {
-    var text = document.getElementById('noteInputField').value;
+  NoteBookController.prototype.createNote = function(inputField = document.getElementById('noteInputField'), appDiv = this.getAppDiv()) {
+    var text = inputField.value;
     var note = new Note(text);
     this.notebookview.notebook.add(note);
-    this.updateApp();
+    this.updateApp(appDiv);
   }
 
-  NoteBookController.prototype.openNoteWithId = function(noteId) {
+  NoteBookController.prototype.openNoteWithId = function(noteId, noteDiv = this.getNoteDiv(noteId)) {
     var note = this.notebookview.notebook.notes[noteId];
     var singleNoteView = new SingleNoteView(note, noteId);
-    var noteDiv = this.getNoteDiv(noteId);
     noteDiv.innerHTML = singleNoteView.HTMLOpenNoteRepresentation();
   };
 
-  NoteBookController.prototype.closeNoteWithId = function(noteId) {
+  NoteBookController.prototype.closeNoteWithId = function(noteId, noteDiv = this.getNoteDiv(noteId)) {
     var note = this.notebookview.notebook.notes[noteId];
     var singleNoteView = new SingleNoteView(note, noteId);
-    var noteDiv = this.getNoteDiv(noteId);
     noteDiv.innerHTML = singleNoteView.HTMLClosedNoteRepresentation();
   };
 

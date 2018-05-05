@@ -5,7 +5,8 @@ var NOTEMODULE = (function(exports) {
     if (notebook.notes != 0) {
       throw new Error ('Something went wrong')
     }
-    console.log('%c Note Book: test that notebook has an empty hash by default is passing', 'color:green')
+    console.log('%c Note Book: test that notebook has an empty hash by default\
+    is passing', 'color:green')
    };
 
  testThatNoteBookHasEmptyArrayByDefault();
@@ -16,7 +17,8 @@ var NOTEMODULE = (function(exports) {
     if (!notebookCreatorCreateOneNote()) {
       throw new Error ('Something went wrong')
     }
-    console.log('%c Note Book: test that method create created new note is passing', 'color:green')
+    console.log('%c Note Book: test that method create created new note\
+     is passing', 'color:green')
    };
 
  testThatNewNoteCreated();
@@ -27,7 +29,8 @@ var NOTEMODULE = (function(exports) {
    if (!notebookCreatorAddOneNote()) {
      throw new Error ('Something went wrong')
    }
-    console.log('%c Note Book: test that method add adding note to the notebook is passing', 'color:green')
+    console.log('%c Note Book: test that method add adding note to the notebook\
+     is passing', 'color:green')
   };
 
 testThatNewNoteAddedToBook();
@@ -38,7 +41,8 @@ function testThatNotesListed() {
   if(!notebookCreatorTreeNotes()) {
     throw new Error ('Something went wrong')
   }
-  console.log('%c Note Book: test that method list listing all notes and showing there text is passing', 'color:green')
+  console.log('%c Note Book: test that method list listing all notes and\
+   showing there text is passing', 'color:green')
  };
 
 testThatNotesListed();
