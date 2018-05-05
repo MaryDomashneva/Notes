@@ -9,6 +9,7 @@ var SINGLENOTEVIEWMODULE = (function(exports) {
     if (singleNoteView.HTMLOpenNoteRepresentation() !== "My favorite breed of dog is french bulldog<a href='#notes/0/close' style='text-decoration:none'> ―</a>") {
       throw new Error ('Something went wrong!')
     }
+    console.log('%c Single Note View: test that method HTMLOpenNoteRepresentation returns right string is passing', 'color:green')
   };
 
   testThatReturnRightOpenString();
@@ -21,6 +22,7 @@ var SINGLENOTEVIEWMODULE = (function(exports) {
     if (singleNoteView.HTMLClosedNoteRepresentation() !== "<a href='#notes/2'>My favorite breed of</a>") {
       throw new Error ('Something went wrong!')
     }
+    console.log('%c Single Note View: test that method HTMLClosedNoteRepresentation returns right string is passing', 'color:green')
   };
 
   testThatReturnRightClosedString();
