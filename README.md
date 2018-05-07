@@ -29,11 +29,11 @@ I can see the full text of an individual note on its own page
 So I can see all the information in the note
 ```
 
-Technologies used
+Technologies used:
 -----
 * node JS 8.9.4
 
-Run project
+Run project:
 -----
 
 * In order to run tests, clone project, install node JS and open file ```index.html``` in Browser.
